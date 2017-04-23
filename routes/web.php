@@ -42,4 +42,4 @@ Route::get('/hm/{type}', 'HmController@index');
 Route::get('/cart/{type}', 'CartController@index');
 
 //支付
-Route::get('/pay/{type}', 'PayController@index');
+Route::get('/pay/', 'PayController@index');

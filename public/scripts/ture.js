@@ -535,22 +535,20 @@ var fun = {
                 if (gamecode_ == "CTZQ") {
                     //if (ctzq_money >= 8) {
                         if ($("#issues").length > 0) {
-                            fun.jctz.href_("/buy/pay/" + gameCode.toLowerCase() + "?gametype=" + type + "&notes=" + zs + "&multiple=" + bs + "&countMoney=" + z + "&issues=" + $("#issues").attr("value"));
-
+                            fun.jctz.href_("/pay/" + gameCode.toLowerCase() + "?gametype=" + type + "&notes=" + zs + "&multiple=" + bs + "&countMoney=" + z + "&issues=" + $("#issues").attr("value"));
                         } else {
-                            fun.jctz.href_("/buy/pay/" + gameCode.toLowerCase() + "?gametype=" + type + "&notes=" + zs + "&multiple=" + bs + "&countMoney=" + z);
+                            fun.jctz.href_("/pay/" + gameCode.toLowerCase() + "?gametype=" + type + "&notes=" + zs + "&multiple=" + bs + "&countMoney=" + z);
                         }
-//                    }else {
-//                        Box.alert("投注金额不能小于8元.");
-//                        return false;
-//                    } 
+                    /*}else {
+                        Box.alert("投注金额不能小于8元.");
+                        return false;
+                    } */
                 }
                 else {
                         if ($("#issues").length > 0) {
-                            fun.jctz.href_("/buy/pay/" + gameCode.toLowerCase() + "?gametype=" + type + "&notes=" + zs + "&multiple=" + bs + "&countMoney=" + z + "&issues=" + $("#issues").attr("value"));
-
+                            fun.jctz.href_("/pay/" + gameCode.toLowerCase() + "?gametype=" + type + "&notes=" + zs + "&multiple=" + bs + "&countMoney=" + z + "&issues=" + $("#issues").attr("value"));
                         } else {
-                            fun.jctz.href_("/buy/pay/" + gameCode.toLowerCase() + "?gametype=" + type + "&notes=" + zs + "&multiple=" + bs + "&countMoney=" + z);
+                            fun.jctz.href_("/pay/" + gameCode.toLowerCase() + "?gametype=" + type + "&notes=" + zs + "&multiple=" + bs + "&countMoney=" + z);
                         }
                 }
             }

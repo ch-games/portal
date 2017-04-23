@@ -13,8 +13,8 @@ var jc = {
     isDg:false,
     initail: function () {
         if (ponum == null || ponum == "") {
-            //location.go(-1);
-            alert("/buy/" + jc.getFhref(gameCode.toLowerCase()))
+            location.go(-1);
+            //alert("/buy/" + jc.getFhref(gameCode.toLowerCase()))
             //window.location = "/buy/" + jc.getFhref(gameCode.toLowerCase());
         } else {
             var isDg = decodeURIComponent(CP.Util.getParaHash("isDg"));

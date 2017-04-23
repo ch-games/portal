@@ -6,9 +6,9 @@ use Request;
 class PayController extends Controller
 {
     //
-    public function index($type)
+    public function index()
     {
-        return view("pay.{$type}");
+        return view("pay.index");
     }
 
 }
