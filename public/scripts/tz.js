@@ -323,7 +323,7 @@ var tz = {
                 Box.tx("最大购买99999倍");
             } else {
                 var zflag = $(".zjStop em").hasClass("check") ? 1 : 0;
-                var url = "/buy/pay/" + gameCode.toLowerCase() + "?notes=" + z + "&multiple=" + b + "&qs=" + q + "&countMoney=" + j + "&zflag=" + zflag;
+                var url = "/pay/" + gameCode.toLowerCase() + "?notes=" + z + "&multiple=" + b + "&qs=" + q + "&countMoney=" + j + "&zflag=" + zflag;
                 if ("dlt" == gameCode.toLowerCase()) {
                     url += "&isappend=" + ($("#againtz").is(":checked") ? 1 : 0);
                 }
@@ -858,7 +858,7 @@ var fun = {
             } else {
                 fun.poll_();
                 zflag = $("#zj_stop").hasClass("nocheck") ? 0 : 1;
-                window.location.href = "/buy/pay/" + gameCode.toLowerCase() + "?notes=" + z + "&multiple=" + b + "&qs=" + q + "&countMoney=" + j + "&zflag=" + zflag;
+                window.location.href = "/pay/" + gameCode.toLowerCase() + "?notes=" + z + "&multiple=" + b + "&qs=" + q + "&countMoney=" + j + "&zflag=" + zflag;
             }
         });
         //发起合买
@@ -1081,13 +1081,11 @@ var cqssc = {
             } else {
 
                 var zflag = $(".zjStop em").hasClass("nocheck") ? 0 : 1;
-                window.location.href = "/buy/pay/" + gameCode.toLowerCase() + "?notes=" + z + "&multiple=" + b + "&qs=" + q + "&countMoney=" + j + "&zflag=" + zflag;
+                window.location.href = "/pay/" + gameCode.toLowerCase() + "?notes=" + z + "&multiple=" + b + "&qs=" + q + "&countMoney=" + j + "&zflag=" + zflag;
             }
         });
 
     }
-
-
 };
 var jx11x5 = {
     init_info: function() {
@@ -1388,7 +1386,7 @@ var jx11x5 = {
                 Box.tx("最大购买99999倍");
             } else {
                 zflag = $(".zjStop em").hasClass("check") ? 1 : 0;
-                window.location.href = "/buy/pay/" + gameCode.toLowerCase() + "?notes=" + z + "&multiple=" + b + "&qs=" + q + "&countMoney=" + j + "&zflag=" + zflag;
+                window.location.href = "/pay/" + gameCode.toLowerCase() + "?notes=" + z + "&multiple=" + b + "&qs=" + q + "&countMoney=" + j + "&zflag=" + zflag;
 
             }
         });

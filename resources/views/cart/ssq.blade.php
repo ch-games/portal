@@ -122,12 +122,10 @@
         <script type="text/javascript">
             var gameCode = "SSQ", gameName = "双色球";
         </script>
-        <script src="scripts/user.js" type="text/javascript"></script>
-        <!--<script src="scripts/tz.js" type="text/javascript"></script>-->
+        <script src="/scripts/user.js" type="text/javascript"></script>
+        <script src="/scripts/tz.js" type="text/javascript"></script>
     </div>
 </div>
-<div class="hide">
-    <script src="http://s4.cnzz.com/z_stat.php?id=1256552288&web_id=1256552288" language="JavaScript"></script>
-</div>
+
 </body>
 </html>

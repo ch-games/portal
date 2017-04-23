@@ -123,8 +123,8 @@
         <script type="text/javascript">
             var gameCode = "DLT", gameName = "大乐透";
         </script>
-        <script src="scripts/user.js" type="text/javascript"></script>
-        <!--<script src="scripts/tz.js" type="text/javascript"></script>-->
+        <script src="/scripts/user.js" type="text/javascript"></script>
+        <script src="/scripts/tz.js" type="text/javascript"></script>
     </div>
 </div>
 <div class="hide">
