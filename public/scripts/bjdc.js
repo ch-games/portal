@@ -286,6 +286,7 @@ var jcpage = {
                 }
             }
         },
+        //动态拼接html
         html: {
             commonHtml: function (item, endTime, sale, i, week) {
                 var h = "", d = stringToDateTime(item.MatchStartTime);
@@ -303,6 +304,7 @@ var jcpage = {
                 }
                 return h;
             },
+            //胜平负
             SPF: function (item, stoptime, sale, i, week) {
 
                 var vari = jcpage.var_;
@@ -342,6 +344,7 @@ var jcpage = {
                 h += "</div>";
                 return h;
             },
+            //总进球
             ZJQ: function (item, stoptime, sale, i, week) {
                 var vari = jcpage.var_;
                 var h = "", str = jcpage.dymanic_.html.commonHtml(item, stoptime, sale, i, week), matchid = item.MatchOrderId.toString();
@@ -378,6 +381,7 @@ var jcpage = {
                 h += "</p></li></ul>";
                 return h;
             },
+            //上下单双
             SXDS: function (item, stoptime, sale, i, week) {
                 var vari = jcpage.var_;
                 var h = "", str = jcpage.dymanic_.html.commonHtml(item, stoptime, sale, i, week), matchid = item.MatchOrderId.toString(), pc = "";
@@ -407,8 +411,8 @@ var jcpage = {
                 h += "</p></li></ul>";
                 return h;
             },
+            //比分
             BF: function (item, stoptime, sale, i, week) {
-
                 var vari = jcpage.var_;
                 var h = "", str = jcpage.dymanic_.html.commonHtml(item, stoptime, sale, i, week), matchid = item.MatchOrderId.toString(), p = "", code = "";
                 var arr = jQuery.grep(vari.data.sp, function (it, idx) {
@@ -506,8 +510,8 @@ var jcpage = {
 
                 return h;
             },
+            //半全场
             BQC: function (item, stoptime, sale) {
-
                 var vari = jcpage.var_;
                 var h = "", str = jcpage.dymanic_.html.commonHtml(item, stoptime, sale), matchid = item.MatchOrderId.toString(), p = "", code = "";
                 var arr = jQuery.grep(vari.data.sp, function (it, idx) {
@@ -571,7 +575,8 @@ var jcpage = {
                 return h;
             }
         },
-        orderList: function (obj) { //传递到右侧投注单中
+        //传递到右侧投注单中
+        orderList: function (obj) {
             var list = ele.selectTb,
                 listid = list.find("#id_" + obj.id).length,
                 idx = Number(obj.id),
@@ -866,7 +871,6 @@ function my_play() {
     $("#c_").html(c_);
 };
 function bindClick() {
-
     //清空
     $(".deleted").Touch(function () {
         if (play.toLowerCase() == "bf" || play.toLowerCase() == "bqc") {
@@ -897,7 +901,7 @@ function bindClick() {
             $(".tzPull").show();
         }
     });
-    //提交
+    //订单提交
     $(".ture").Touch(function () {
         if ($(this).hasClass("true_disabled")) return;
         var h = [];
@@ -972,7 +976,6 @@ function bindClick() {
         localStorage.removeItem(gameCode.toLowerCase() + play.toLowerCase() + "_PollNum");
         window.location.href = "/buy/zctz/" + gameCode + "/?gametype=" + play.toLowerCase();
     });
-
 }
 
 $(function () {

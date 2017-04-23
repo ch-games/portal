@@ -28,3 +28,5 @@ Route::get('/dc/{type}', 'DcController@index');
 Route::get('/zq/{type}', 'ZqController@index');
 
 Route::get('/lq/{type}', 'LqController@index');
+
+Route::get('/user/{type}', 'UserController@index');

@@ -162,8 +162,7 @@
         <input type="button" value="确定" id="zfqd"/>
     </div>
 </section>
-<div id="Mask"
-     style="display: none; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; background: none repeat scroll 0% 0% gray; opacity: 0.5; z-index: 999;">
+<div id="Mask" style="display: none; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; background: none repeat scroll 0% 0% gray; opacity: 0.5; z-index: 999;">
 </div>
 <script type="text/javascript">
     var ires = "http://res.qcwddd.com/iqucai.touch/images/";
@@ -181,7 +180,7 @@
             <article id="content_home" style="">
                 <article class="gray">
                     <div class="img">
-                        <img src="images/0-1注册_r2_c4.gif">
+                        <img src="/images/0-1注册_r2_c4.gif">
                     </div>
                     <div class="pdLfrt09 pdTop06">
                         <div class="s1 relative">
@@ -211,9 +210,6 @@
         <script src="/scripts/user.js" type="text/javascript"></script>
 
     </div>
-</div>
-<div class="hide">
-    <script src="/scripts/z_stat.js" language="JavaScript"></script>
 </div>
 </body>
 </html>
