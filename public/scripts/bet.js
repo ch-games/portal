@@ -182,19 +182,20 @@ var fun = {
                     }
                     var redCountArr = redValue.split(",");
                     var blueCountArr = blueValue.split(",");
+                    var k = localStorage.getItem(gameCode);
+                    if (!k) {
+                        localStorage.setItem(gameCode, type + "." + redValue + "|" + blueValue);
+                    } else {
+                        localStorage.setItem(gameCode, k + "#" + type + "." + redValue + "|" + blueValue);
+                    }
                     url = "/buy/tz/" + gameCode.toLowerCase();
                     data = {
                         'type':type,'redValue':redValue,'blueValue':blueValue,'dredValue':dredValue,
                         'tblueValue':tblueValue,'dtblueValue':dtblueValue,
                     };
                     doAjaxSave(url,data);
-                    /*var k = localStorage.getItem(gameCode);
-                    if (!k) {
-                        localStorage.setItem(gameCode, type + "." + redValue + "|" + blueValue);
-                    } else {
-                        localStorage.setItem(gameCode, k + "#" + type + "." + redValue + "|" + blueValue);
-                    }
-                    window.location.href = "/buy/tz/" + gameCode.toLowerCase();*/
+
+                    /*window.location.href = "/buy/tz/" + gameCode.toLowerCase();*/
                     //脱胆投注
                 } else {
                     if (ballBox.count == 0) {
@@ -208,19 +209,20 @@ var fun = {
                         var tredCountLen = tredCountArr.length;
                         var dtblueCountArr = dtblueValue.split(",");
                         var dtblueCountLen = dtblueCountArr.length;
+                        var k = localStorage.getItem(gameCode);
+                        if (!k) {
+                            localStorage.setItem(gameCode, type + "." + dredValue + "|" + tblueValue + "|" + dtblueValue);
+                        } else {
+                            localStorage.setItem(gameCode, k + "#" + type + "." + dredValue + "|" + tblueValue + "|" + dtblueValue);
+                        }
                         url = "/buy/tz/" + gameCode.toLowerCase();
                         data = {
                             'type':type,'dredCountArr':dredCountArr,'dredCountLen':dredCountLen,'tredCountArr':tredCountArr,
                             'tredCountLen':tredCountLen,'dtblueCountArr':dtblueCountArr,'dtblueCountLen':dtblueCountLen
                         };
                         doAjaxSave(url,data);
-                        /*var k = localStorage.getItem(gameCode);
-                        if (!k) {
-                            localStorage.setItem(gameCode, type + "." + dredValue + "|" + tblueValue + "|" + dtblueValue);
-                        } else {
-                            localStorage.setItem(gameCode, k + "#" + type + "." + dredValue + "|" + tblueValue + "|" + dtblueValue);
-                        }
-                        window.location.href = "/buy/tz/" + gameCode.toLowerCase();*/
+
+                         /*window.location.href = "/buy/tz/" + gameCode.toLowerCase();*/
                     } else {
                         Box.tx("请选择" + (ballBox.cur.min) + "个红球" + ballBox.cur.bluemin + "个蓝球");
                         return false;
@@ -310,18 +312,19 @@ var fun = {
                     }
                     var redCountArr = redValue.split(",");
                     var blueCountArr = blueValue.split(",");
+                    var k = localStorage.getItem(gameCode);
+                    if (!k) {
+                        localStorage.setItem(gameCode, type + "." + redValue + "|" + blueValue)
+                    } else {
+                        localStorage.setItem(gameCode, k + "#" + type + "." + redValue + "|" + blueValue)
+                    }
                     var url = "/buy/tz/" + gameCode.toLowerCase();
                     var data = {
                         'type':type,'redCountArr':redCountArr,'blueCountArr':blueCountArr
                     };
                     doAjaxSave(url,data);
-                    /*var k = localStorage.getItem(gameCode);
-                     if (!k) {
-                     localStorage.setItem(gameCode, type + "." + redValue + "|" + blueValue)
-                     } else {
-                     localStorage.setItem(gameCode, k + "#" + type + "." + redValue + "|" + blueValue)
-                     }
-                     window.location.href = "/buy/tz/" + gameCode.toLowerCase();*/
+
+                     /* window.location.href = "/buy/tz/" + gameCode.toLowerCase();*/
                     //脱胆投注
                 } else {
                     if (ballBox.count == 0) {
@@ -335,19 +338,20 @@ var fun = {
                         var tredCountLen = tredCountArr.length;
                         var dtblueCountArr = dtblueValue.split(",");
                         var dtblueCountLen = dtblueCountArr.length;
+                        var k = localStorage.getItem(gameCode);
+                        if (!k) {
+                            localStorage.setItem(gameCode, type + "." + dredValue + "|" + tblueValue + "|" + dtblueValue)
+                        } else {
+                            localStorage.setItem(gameCode, k + "#" + type + "." + dredValue + "|" + tblueValue + "|" + dtblueValue)
+                        }
                         var url = "/buy/tz/" + gameCode.toLowerCase();
                         var data = {
                             'type':type,'dredCountArr':dredCountArr,'dredCountLen':dredCountLen,'tredCountArr':tredCountArr,
                             'tredCountLen':tredCountLen,'dtblueCountArr':dtblueCountArr,'dtblueCountLen':dtblueCountLen
                         };
                         doAjaxSave(url,data);
-                        /*var k = localStorage.getItem(gameCode);
-                        if (!k) {
-                            localStorage.setItem(gameCode, type + "." + dredValue + "|" + tblueValue + "|" + dtblueValue)
-                        } else {
-                            localStorage.setItem(gameCode, k + "#" + type + "." + dredValue + "|" + tblueValue + "|" + dtblueValue)
-                        }
-                        window.location.href = "/buy/tz/" + gameCode.toLowerCase();*/
+
+                         /*window.location.href = "/buy/tz/" + gameCode.toLowerCase();*/
                     } else {
                         Box.tx("请选择" + (ballBox.cur.min) + "个红球" + ballBox.cur.bluemin + "个蓝球");
                         return false;
@@ -497,10 +501,11 @@ var fun = {
                     code = c.code(n, zs);
                     var sdSelectNum = localStorage.getItem(gameCode);
                     sdSelectNum && (sdSelectNum += code) || (sdSelectNum = code);
+                    localStorage.setItem(gameCode, sdSelectNum);
                     var data = {'sdSelectNum':sdSelectNum};
                     var url = "/buy/tz/" + gameCode.toLowerCase();
                     doAjaxSave(url,data);
-                    //localStorage.setItem(gameCode, sdSelectNum);
+
                     //location.href = "/buy/p3tz/" + gameCode.toLowerCase();
                 }
             });
@@ -750,10 +755,10 @@ var fun = {
                 } else {
                     var code = "";
                     code = c.code1(n, zs);
+                    localStorage.setItem(gameCode, code);
                     var data = {'code':code};
                     var url = "/buy/tz/" + gameCode.toLowerCase();
                     doAjaxSave(url,data);
-                    //localStorage.setItem(gameCode, code);
                     //location.href = "/buy/p3tz/" + gameCode.toLowerCase();
                 }
             });
@@ -880,10 +885,10 @@ var fun = {
                     Box.alert("请选择投注内容");
                 } else {
                     var code = c.code2(n, zs, h);
+                    localStorage.setItem(gameCode, code);
                     var data = {'code':code};
                     var url = "/buy/tz/" + gameCode.toLowerCase();
                     doAjaxSave(url,data);
-                    //localStorage.setItem(gameCode, code);
                     //window.location.href = "/buy/tz/" + gameCode.toLowerCase();
                 }
             });

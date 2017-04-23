@@ -1,4 +1,5 @@
 ﻿var PollNum = localStorage.getItem(gameCode.toLowerCase() + play.toLowerCase() + "_PollNum");
+
 var ele =
 {
     tbody: $("#content_"),
@@ -238,13 +239,11 @@ var jcpage = {
                 var data = jcpage.var_.data.match;
                 var h = [];
                 if (PollNum) {
-
                     var PollNum1 = PollNum.split("|")[0].split(",");
                     for (var n = 0; n < PollNum1.length; n++) {
                         ele.PollNum_t[n] = PollNum1[n].split("=")[0];
                         ele.PollNum_c[n] = PollNum1[n].split("=")[1];
                     }
-
                 }
                 if (data.length > 0) {
                     var endTime = stringToDateTime(data[0].MatchStartTime);
@@ -275,11 +274,11 @@ var jcpage = {
                         if (stringToDateTime(data[i].LocalStopTime) > servertime && data[i].MatchStateName != "Cancel" && data[i].MatchStateName != "Late") {
                             h[h.length] = func(data[i], endTime, 1, i, week);
                         }
-//                        else {
-//                            jcpage.var_.endTr.push(data[i].MatchOrderId);
-//                            jcpage.var_.hideTr.push(data[i].MatchOrderId);
-//                            h[h.length] = func(data[i], endTime, 0, i, week);
-//                        }
+                        /*else {
+                            jcpage.var_.endTr.push(data[i].MatchOrderId);
+                            jcpage.var_.hideTr.push(data[i].MatchOrderId);
+                            h[h.length] = func(data[i], endTime, 0, i, week);
+                        }*/
                     }
                     ele.tbody.html(h.join(""));
                     BindEvent();
