@@ -9,15 +9,14 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
-    <link href="css/main.min.css" rel="stylesheet" type="text/css"/>
-    <link href="css/common.css" rel="stylesheet" type="text/css"/>
-    <link href="css/my_common.css" rel="stylesheet" type="text/css"/>
-    <link href="css/user.min.css" rel="stylesheet" type="text/css"/>
-    <script src="scripts/share.touch.min.js" type="text/javascript"></script>
-    <script src="scripts/common.js" type="text/javascript"></script>
-    <script src="scripts/iscroll.js" type="text/javascript"></script>
-    <script src="scripts/onlinephone.js" type="text/javascript"></script>
-
+    <link href="/css/main.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/my_common.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/user.min.css" rel="stylesheet" type="text/css"/>
+    <script src="/scripts/share.touch.min.js" type="text/javascript"></script>
+    <script src="/scripts/common.js" type="text/javascript"></script>
+    <script src="/scripts/iscroll.js" type="text/javascript"></script>
+    <script src="/scripts/onlinephone.js" type="text/javascript"></script>
     <style>
         * {
             box-sizing: border-box;
@@ -210,13 +209,13 @@
         </section>
         <div id="pop" class="hide">
         </div>
-        <script src="scripts/gt.js"></script>
-        <script src="scripts/user.js" type="text/javascript"></script>
+        <script src="/scripts/gt.js"></script>
+        <script src="/scripts/user.js" type="text/javascript"></script>
 
     </div>
 </div>
 <div class="hide">
-    <script src="scripts/z_stat.js" language="JavaScript"></script>
+    <script src="/scripts/z_stat.js" language="JavaScript"></script>
 </div>
 </body>
 </html>
