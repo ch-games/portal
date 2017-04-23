@@ -4,6 +4,7 @@
     <title>时时彩</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <meta charset="utf-8"/>
+    <meta name="_token" content="{{ csrf_token() }}"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" name="viewport">
     <meta content="yes" name="apple-mobile-web-app-capable">
@@ -320,22 +321,11 @@
             var gameCode = "CQSSC",gameName = "时时彩";
         </script>
         <script src="/scripts/bet.js" type="text/javascript"></script>
+        <script src="/scripts/utils.js" type="text/javascript"></script>
     </div>
 </div>
 <div class="hide">
     <script src="/scripts/z_stat.js" language="JavaScript"></script>
 </div>
-<script>
-    //头部选项
-    /*$(".pullDown").click(function () {
-        if ($(".pullText").is(":visible")) {
-            $(this).removeClass("pullHover");
-            $(".pullText").hide();
-        } else {
-            $(this).addClass("pullHover");
-            $(".pullText").show();
-        }
-    });*/
-</script>
 </body>
 </html>

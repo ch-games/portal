@@ -185,7 +185,7 @@ var fun = {
                     url = "/buy/tz/" + gameCode.toLowerCase();
                     data = {
                         'type':type,'redValue':redValue,'blueValue':blueValue,'dredValue':dredValue,
-                        'tblueValue':tblueValue,'dtblueValue':dtblueValue
+                        'tblueValue':tblueValue,'dtblueValue':dtblueValue,
                     };
                     doAjaxSave(url,data);
                     /*var k = localStorage.getItem(gameCode);
@@ -497,8 +497,11 @@ var fun = {
                     code = c.code(n, zs);
                     var sdSelectNum = localStorage.getItem(gameCode);
                     sdSelectNum && (sdSelectNum += code) || (sdSelectNum = code);
-                    localStorage.setItem(gameCode, sdSelectNum);
-                    location.href = "/buy/p3tz/" + gameCode.toLowerCase();
+                    var data = {'sdSelectNum':sdSelectNum};
+                    var url = "/buy/tz/" + gameCode.toLowerCase();
+                    doAjaxSave(url,data);
+                    //localStorage.setItem(gameCode, sdSelectNum);
+                    //location.href = "/buy/p3tz/" + gameCode.toLowerCase();
                 }
             });
         }
@@ -747,8 +750,11 @@ var fun = {
                 } else {
                     var code = "";
                     code = c.code1(n, zs);
-                    localStorage.setItem(gameCode, code);
-                    location.href = "/buy/p3tz/" + gameCode.toLowerCase();
+                    var data = {'code':code};
+                    var url = "/buy/tz/" + gameCode.toLowerCase();
+                    doAjaxSave(url,data);
+                    //localStorage.setItem(gameCode, code);
+                    //location.href = "/buy/p3tz/" + gameCode.toLowerCase();
                 }
             });
         },
@@ -874,8 +880,11 @@ var fun = {
                     Box.alert("请选择投注内容");
                 } else {
                     var code = c.code2(n, zs, h);
-                    localStorage.setItem(gameCode, code);
-                    window.location.href = "/buy/tz/" + gameCode.toLowerCase();
+                    var data = {'code':code};
+                    var url = "/buy/tz/" + gameCode.toLowerCase();
+                    doAjaxSave(url,data);
+                    //localStorage.setItem(gameCode, code);
+                    //window.location.href = "/buy/tz/" + gameCode.toLowerCase();
                 }
             });
             $("#shake").Touch(function () {

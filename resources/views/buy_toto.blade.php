@@ -208,6 +208,7 @@
             var gameCode = "FC3D", gameName = "福彩3D";
         </script>
         <script src="/scripts/bet.js" type="text/javascript"></script>
+        <script src="/scripts/utils.js" type="text/javascript"></script>
     </div>
 </div>
 <div class="hide">

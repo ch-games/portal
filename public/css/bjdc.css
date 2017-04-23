@@ -1,6 +1,6 @@
 ﻿
 /*标题*/
-.tzHeader {margin-bottom: 2.6rem; position: relative; z-index: 10;}
+.tzHeader {/*margin-bottom: 2.6rem; */position: relative; z-index: 10;}
 .tzHeader h1:after {border-color: transparent transparent transparent #fff;
     border-style: solid;
     border-width: 0.5rem;

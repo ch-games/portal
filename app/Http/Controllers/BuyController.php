@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use Request;
 class BuyController extends Controller
 {
     //
@@ -13,6 +12,7 @@ class BuyController extends Controller
     }
     
     public function tz($type) {
-    	;
+        $data = Request::all();
+    	return $data;
     }
 }

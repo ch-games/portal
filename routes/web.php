@@ -19,6 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/buy/{type}', 'BuyController@buy');
-Route::post('/buy/tz/{type}', 'BuyController@buy');
+Route::post('/buy/tz/{type}', 'BuyController@tz');
 
 Route::get('/admin/api/lu/{type}', 'AdminController@lotteryUpdate');
+
+Route::get('/dc/{type}', 'DcController@index');
+
+Route::get('/zq/{type}', 'ZqController@index');
+
+Route::get('/lq/{type}', 'LqController@index');

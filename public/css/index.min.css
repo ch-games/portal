@@ -458,3 +458,71 @@ ul,li{list-style:none}
 .forget_div_01{width:95%;min-height:3rem;background-color:#fff;margin:4rem auto;text-align:center}
 .forget_div_01 .forget_span_01{color:#B7B1C0}
 .forget_div_01 .forget_span_02{color:#FF1722}
+.random—box {
+    height: 3.3rem;
+    background: #fff;
+    padding: 0.3rem 0.8rem;
+}
+
+.random—title {
+    height: 1.3rem;
+}
+
+.random—title h5, .random—title a {
+    line-height: 1.3rem;
+}
+
+.random—title a {
+    font-size: 0.5rem;
+}
+
+.random—box .random—body {
+    height: 2rem;
+}
+
+.random—body .fl {
+    width: 80%;
+}
+
+.random—body .fl span {
+    display: inline-block;
+    margin: 0.25rem 0.25rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 1.5rem;
+    color: #fff;
+    background: #CD0508;
+    text-align: center
+}
+
+.random—body .fl span.blue {
+    background: blue;
+}
+
+.random—body .fr {
+    width: 20%;
+}
+
+.random—body .fr .buy {
+    display: block;
+    margin-top: 0.4rem;
+    height: 1.2rem;
+    width: 3.5rem;
+    line-height: 1.2rem;
+    background: #CD0508;
+    color: #fff;
+    border-radius: 0.2rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+.icon{display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-repeat:no-repeat ;
+    background-size:2.5rem ;
+}
+.icon1{background-image: url('../images/0-0首页_r1_c1.gif')}
+.icon2{background-image: url('../images/0-0首页_r2_c18.gif')}
+.icon3{background-image: url('../images/0-0首页_r3_c14.gif')}
+.icon4{background-image: url('../images/0-0首页_r4_c8.gif')}

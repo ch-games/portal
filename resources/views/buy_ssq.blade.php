@@ -4,6 +4,7 @@
     <title>双色球 - 订单投注</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <meta charset="utf-8"/>
+    <meta name="_token" content="{{ csrf_token() }}"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" name="viewport">
     <meta content="yes" name="apple-mobile-web-app-capable">
@@ -47,7 +48,7 @@
 </header>
 <div style="position: relative;" id="outer">
     <div class="wrap">
-        
+
         <nav id="ssq_tab" class="sdTab ssqTab relative" style="display: none">
             <ul class="clearfix">
                 <li id="pttz" class="cur" val="DS" url="BZXH" playid="1">普通投注</li>
@@ -237,6 +238,7 @@
             var gameCode = "SSQ", gameName = "双色球";
         </script>
         <script src="/scripts/bet.js" type="text/javascript"></script>
+        <script src="/scripts/utils.js" type="text/javascript"></script>
     </div>
 </div>
 <div class="hide">

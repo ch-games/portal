@@ -26,8 +26,7 @@
         <input type="button" value="确定" id="zfqd"/>
     </div>
 </section>
-<div id="Mask"
-     style="display: none; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; background: none repeat scroll 0% 0% gray; opacity: 0.5; z-index: 999;"></div>
+<div id="Mask" style="display: none; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; background: none repeat scroll 0% 0% gray; opacity: 0.5; z-index: 999;"></div>
 <script type="text/javascript">
     var ires = "http://res.qcwddd.com/iqucai.touch/images/";
     var dres = "http://data.qcwddd.com/matchdata/";
@@ -337,8 +336,7 @@
 
         </script>
         <script src="/scripts/bet.js" type="text/javascript"></script>
-
-
+        <script src="/scripts/utils.js" type="text/javascript"></script>
     </div>
 </div>
 <div class="hide">
