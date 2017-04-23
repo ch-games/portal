@@ -50,9 +50,8 @@
         </header>
         <div style="background: none repeat scroll 0% 0% rgb(255, 255, 255);" id="newinfo_">
             <section>
-                <div id="historyList" name="historyList" class="kjall all pklist"
-                     style="background: none repeat scroll 0% 0% rgb(255, 255, 255);">
-                    <a href="###">
+                <div id="historyList" name="historyList" class="kjall all pklist" style="background: none repeat scroll 0% 0% rgb(255, 255, 255);">
+                    <a href="javasript:void(0)">
                         <div class="row">
                             <div class="clearfix lskjTit">第20170314期 2017-03-14 21:15:00</div>
                             <div class="kjNum fl">
@@ -109,7 +108,7 @@
                             </table>
                         </div>
                     </a>
-					<a href="###">
+					<a href="javasript:void(0)">
                         <div class="row">
                             <div class="clearfix lskjTit">第20170314期 2017-03-14 21:15:00</div>
                             <div class="kjNum fl">
@@ -166,7 +165,7 @@
                             </table>
                         </div>
                     </a>
-                    <a href="###">
+                    <a href="javasript:void(0)">
                         <div class="row">
                             <div class="clearfix lskjTit">第20170314期 2017-03-14 21:15:00</div>
                             <div class="kjNum fl">
@@ -223,7 +222,7 @@
                             </table>
                         </div>
                     </a>
-					<a href="###">
+					<a href="javasript:void(0)">
                         <div class="row">
                             <div class="clearfix lskjTit">第20170314期 2017-03-14 21:15:00</div>
                             <div class="kjNum fl">
@@ -284,14 +283,9 @@
                 <div class="load_more tc">加载更多</div>
             </section>
         </div>
-        <script src="/scripts/trend.js" type="text/javascript"></script>
-
-
     </div>
 </div>
-<div class="hide">
-    <script src="/scripts/z_stat.js" language="JavaScript"></script>
-</div>
+<script src="/scripts/trend.js" type="text/javascript"></script>
 <script>
     $('.all a').click(function(){
         $(this).find('.table-box').toggle();

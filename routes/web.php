@@ -23,10 +23,20 @@ Route::post('/buy/tz/{type}', 'BuyController@tz');
 
 Route::get('/admin/api/lu/{type}', 'AdminController@lotteryUpdate');
 
+//北京单场
 Route::get('/dc/{type}', 'DcController@index');
 
+//竞彩足球
 Route::get('/zq/{type}', 'ZqController@index');
 
+//竞彩篮球
 Route::get('/lq/{type}', 'LqController@index');
 
+//用户相关
 Route::get('/user/{type}', 'UserController@index');
+
+//合买大厅
+Route::get('/hm/{type}', 'HmController@index');
+
+//购物车
+Route::get('/cart/{type}', 'CartController@index');

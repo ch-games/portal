@@ -36,7 +36,6 @@
 
 <div style="position: relative;" id="outer">
     <div class="wrap">
-
         <input type="hidden" value="ssq" id="gamecode"/>
         <input type="hidden" value="2017-002" id="issue"/>
         <header class="hmzxHeader">
@@ -53,7 +52,7 @@
             <section>
                 <div id="historyList" name="historyList" class="kjall all pklist"
                      style="background: none repeat scroll 0% 0% rgb(255, 255, 255);">
-                    <a href="###">
+                    <a href="javascript:void(0)">
                         <div class="row">
                             <div class="clearfix lskjTit">第20170314期 2017-03-14 21:15:00</div>
                             <div class="kjNum">
@@ -111,123 +110,7 @@
                             </table>
                         </div>
                     </a>
-                    <a href="###">
-                        <div class="row">
-                            <div class="clearfix lskjTit">第20170314期 2017-03-14 21:15:00</div>
-                            <div class="kjNum">
-                                <span>15</span>
-                                <span>19</span>
-                                <span>23</span>
-                                <span>24</span>
-                                <span>25</span>
-                                <span>32</span>
-                                <span class='blue'>03</span>
-                            </div>
-                            <i class="">&or;</i>
-                        </div>
-
-                        <div class="table-box" style="display: none">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>本期销量</th>
-                                    <th>累计奖池</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>13123213</td>
-                                    <td>13123213</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>奖项</th>
-                                    <th>注数（注）</th>
-                                    <th>每注金额（元）</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>13123213</td>
-                                    <td>13123213</td>
-                                    <td>13123213</td>
-                                </tr>
-                                <tr>
-                                    <td>13123213</td>
-                                    <td>13123213</td>
-                                    <td>13123213</td>
-                                </tr>
-                                <tr>
-                                    <td>13123213</td>
-                                    <td>13123213</td>
-                                    <td>13123213</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </a>
-					<a href="###">
-                        <div class="row">
-                            <div class="clearfix lskjTit">第20170314期 2017-03-14 21:15:00</div>
-                            <div class="kjNum">
-                                <span>15</span>
-                                <span>19</span>
-                                <span>23</span>
-                                <span>24</span>
-                                <span>25</span>
-                                <span>32</span>
-                                <span class='blue'>03</span>
-                            </div>
-                            <i class="">&or;</i>
-                        </div>
-
-                        <div class="table-box" style="display: none">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>本期销量</th>
-                                    <th>累计奖池</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>13123213</td>
-                                    <td>13123213</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>奖项</th>
-                                    <th>注数（注）</th>
-                                    <th>每注金额（元）</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>13123213</td>
-                                    <td>13123213</td>
-                                    <td>13123213</td>
-                                </tr>
-                                <tr>
-                                    <td>13123213</td>
-                                    <td>13123213</td>
-                                    <td>13123213</td>
-                                </tr>
-                                <tr>
-                                    <td>13123213</td>
-                                    <td>13123213</td>
-                                    <td>13123213</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </a>
-					<a href="###">
+                    <a href="javascript:void(0)">
                         <div class="row">
                             <div class="clearfix lskjTit">第20170314期 2017-03-14 21:15:00</div>
                             <div class="kjNum">
@@ -289,14 +172,9 @@
                 <div class="load_more tc">加载更多</div>
             </section>
         </div>
-        <script src="/scripts/trend.js" type="text/javascript"></script>
-
-
     </div>
 </div>
-<div class="hide">
-    <script src="/scripts/z_stat.js" language="JavaScript"></script>
-</div>
+<script src="/scripts/trend.js" type="text/javascript"></script>
 <script>
     $('.all a').click(function(){
         $(this).find('.table-box').toggle();

@@ -76,8 +76,7 @@ var tz = {
     },
     bindEvent: function () {
         //机选一注
-        $("#jxbtn").bind("click",
-            function () {
+        $("#jxbtn").bind("click", function () {
                 CC.machineSelect();
                 var antecode = localStorage.getItem(gameCode);
                 if (!antecode) {
@@ -111,70 +110,66 @@ var tz = {
                         tz.loadMoney();
                     });
             });
-        $("input[name='bs']").bind("keyup",
-            function() {
-                var val = $(this).val();
-                var reg = /^\d*$/;
-                if (!reg.test(val)) {
-                    $(this).val("1");
-                }
-                if (val.indexOf("0") == 0) {
-                    $(this).val("1");
-                }
-                if (parseInt(val) > 0) {
-                    if (parseInt($("input[name='bs']").val()) > 99999) {
-                        Box.alert("最多只能投99999倍", function() {
-                            $("input[name='bs']").val("99999");
-                            tz.loadMoney();
-                        });
-                    } else {
+        $("input[name='bs']").bind("keyup", function() {
+            var val = $(this).val();
+            var reg = /^\d*$/;
+            if (!reg.test(val)) {
+                $(this).val("1");
+            }
+            if (val.indexOf("0") == 0) {
+                $(this).val("1");
+            }
+            if (parseInt(val) > 0) {
+                if (parseInt($("input[name='bs']").val()) > 99999) {
+                    Box.alert("最多只能投99999倍", function() {
+                        $("input[name='bs']").val("99999");
                         tz.loadMoney();
-                    }
-                }
-
-
-            });
-        $("input[name='qs']").bind("keyup",
-            function() {
-                var val = $(this).val();
-                var reg = /^\d*$/;
-                if (!reg.test(val)) {
-                    $(this).val("1");
-                }
-                if (val == "") {
-                    $(this).val("");
-                }
-                if (val.indexOf("0") == 0) {
-                    $(this).val("1");
-                }
-                if (parseInt($("input[name='qs']").val()) == 0) {
-                    $(".zjStop").hide();
-                } else if (parseInt($("input[name='qs']").val()) > 1) {
-                    if (parseInt($("input[name='qs']").val()) <= 100) {
-                        $(".fqhm").attr("disabled", true);
-                        $(".fqhm").addClass("fqhmGray");
-                        $(".zjStop").show();
-                        $(".ssqzh").show();
-                        tz.loadMoney();
-                    } else {
-                        Box.alert("最多只能追100期", function() {
-
-                            $("input[name='qs']").val("100");
-                            $(".ssqzh").show();
-                            $(".fqhm").attr("disabled", true);
-                            tz.loadMoney();
-                        });
-                    }
-                } else if (parseInt($("input[name='qs']").val()) == 1) {
-                    $("#fqhm").attr("disabled", false);
-                    $("#fqhm").removeClass("fqhmGray");
-                    $("#fqhm").addClass("fqhm");
-                    $(".zjStop").hide();
-                    $(".ssqzh").hide();
+                    });
+                } else {
                     tz.loadMoney();
                 }
+            }
+        });
+        $("input[name='qs']").bind("keyup", function() {
+            var val = $(this).val();
+            var reg = /^\d*$/;
+            if (!reg.test(val)) {
+                $(this).val("1");
+            }
+            if (val == "") {
+                $(this).val("");
+            }
+            if (val.indexOf("0") == 0) {
+                $(this).val("1");
+            }
+            if (parseInt($("input[name='qs']").val()) == 0) {
+                $(".zjStop").hide();
+            } else if (parseInt($("input[name='qs']").val()) > 1) {
+                if (parseInt($("input[name='qs']").val()) <= 100) {
+                    $(".fqhm").attr("disabled", true);
+                    $(".fqhm").addClass("fqhmGray");
+                    $(".zjStop").show();
+                    $(".ssqzh").show();
+                    tz.loadMoney();
+                } else {
+                    Box.alert("最多只能追100期", function() {
 
-            });
+                        $("input[name='qs']").val("100");
+                        $(".ssqzh").show();
+                        $(".fqhm").attr("disabled", true);
+                        tz.loadMoney();
+                    });
+                }
+            } else if (parseInt($("input[name='qs']").val()) == 1) {
+                $("#fqhm").attr("disabled", false);
+                $("#fqhm").removeClass("fqhmGray");
+                $("#fqhm").addClass("fqhm");
+                $(".zjStop").hide();
+                $(".ssqzh").hide();
+                tz.loadMoney();
+            }
+
+        });
         $("input[name='bs']").blur(function() {
             if ($(this).val() == "" || parseInt($(this).val()) == 0) {
                 $(this).val("1");
@@ -188,68 +183,65 @@ var tz = {
             }
         });
         //清空所有号码
-        $("#clearAll").bind("click",
-            function () {
-                localStorage.removeItem(gameCode);
-                $(".ssqNum").html("");
-                Box.tx("请至少选择一注进行投注");
-                tz.loadMoney();
-            });
+        $("#clearAll").bind("click",function () {
+            localStorage.removeItem(gameCode);
+            $(".ssqNum").html("");
+            Box.tx("请至少选择一注进行投注");
+            tz.loadMoney();
+        });
         //追号期数加减
-        $(".qplus").bind("click",
-            function () {
-                $(".ssqzh li").removeClass("cur");
-                var p = parseInt($("input[name='qs']").val());
-                p++;
-                $("input[name='qs']").val(p);
-                tz.loadMoney();
-                if ($("input[name='qs']").val() == 1) {
-                    $(".zjStop").hide();
-                    $(".ssqzh").hide();
-                    $("#fqhm").attr("disabled", false);
-                    $("#fqhm").removeClass("fqhmGray");
-                    if (!$("#fqhm").hasClass("fqhm")) {
-                        $("#fqhm").addClass("fqhm");
-                    }
-                } else if ($("input[name='qs']").val() > 1 && $("input[name='qs']").val() <= 100) {
-                    $(".zjStop").show();
-                    $(".ssqzh").show();
-                    $("#fqhm").attr("disabled", true);
-                    $("#fqhm").addClass("fqhmGray");
-                } else {
-                    Box.alert("最多只能追100期", function () {
-                        $("input[name='qs']").val("100");
-                        tz.loadMoney();
-                    });
+        $(".qplus").bind("click",function () {
+            $(".ssqzh li").removeClass("cur");
+            var p = parseInt($("input[name='qs']").val());
+            p++;
+            $("input[name='qs']").val(p);
+            tz.loadMoney();
+            if ($("input[name='qs']").val() == 1) {
+                $(".zjStop").hide();
+                $(".ssqzh").hide();
+                $("#fqhm").attr("disabled", false);
+                $("#fqhm").removeClass("fqhmGray");
+                if (!$("#fqhm").hasClass("fqhm")) {
+                    $("#fqhm").addClass("fqhm");
+                }
+            } else if ($("input[name='qs']").val() > 1 && $("input[name='qs']").val() <= 100) {
+                $(".zjStop").show();
+                $(".ssqzh").show();
+                $("#fqhm").attr("disabled", true);
+                $("#fqhm").addClass("fqhmGray");
+            } else {
+                Box.alert("最多只能追100期", function () {
+                    $("input[name='qs']").val("100");
+                    tz.loadMoney();
+                });
 
+            }
+        });
+        $(".qminus").bind("click", function () {
+            $(".ssqzh li").removeClass("cur");
+            var p = parseInt($("input[name='qs']").val());
+            p--;
+            if (p < 1) {
+                p = 1;
+                $("#fqhm").removeClass("fqhmGray")
+            }
+            $("input[name='qs']").val(p);
+            tz.loadMoney();
+            if ($("input[name='qs']").val() == 1) {
+                $(".zjStop").hide();
+                $(".ssqzh").hide();
+                $("#fqhm").removeClass("fqhmGray");
+                $("#fqhm").removeAttr("disabled");
+                if (!$("#fqhm").hasClass("fqhm")) {
+                    $("#fqhm").addClass("fqhm");
                 }
-            });
-        $(".qminus").bind("click",
-            function () {
-                $(".ssqzh li").removeClass("cur");
-                var p = parseInt($("input[name='qs']").val());
-                p--;
-                if (p < 1) {
-                    p = 1;
-                    $("#fqhm").removeClass("fqhmGray")
-                }
-                $("input[name='qs']").val(p);
-                tz.loadMoney();
-                if ($("input[name='qs']").val() == 1) {
-                    $(".zjStop").hide();
-                    $(".ssqzh").hide();
-                    $("#fqhm").removeClass("fqhmGray");
-                    $("#fqhm").removeAttr("disabled");
-                    if (!$("#fqhm").hasClass("fqhm")) {
-                        $("#fqhm").addClass("fqhm");
-                    }
-                } else {
-                    $(".zjStop").show();
-                    $(".ssqzh").show();
-                    $("#fqhm").attr("disabled", true)
-                    $("#fqhm").addClass("fqhmGray");
-                }
-            });
+            } else {
+                $(".zjStop").show();
+                $(".ssqzh").show();
+                $("#fqhm").attr("disabled", true)
+                $("#fqhm").addClass("fqhmGray");
+            }
+        });
         //投注倍数加减
         $(".bplus").bind("click",
             function () {
@@ -370,7 +362,6 @@ var tz = {
         var ssqArr = antecode.split("#");
         var len = ssqArr.length;
         for (var i = 0; i < len; i++) {
-
             tz.number = new Array();
             var type = ssqArr[i].toString().split('.').length > 1 ? ssqArr[i].toString().split('.')[0] : "DS";
             var number = ssqArr[i].toString().split('.').length > 1 ? ssqArr[i].toString().split('.')[1] : ssqArr[i];
@@ -410,14 +401,12 @@ var tz = {
         }
         $(".ssqNum").html(html);
         tz.loadMoney();
-        $(".error2").bind("click",
-            function () {
-                $(this).parents("div.ssqtzNum").remove();
-                var str = tz.joinValue();
-
-                localStorage.setItem(gameCode, str);
-                tz.loadMoney()
-            })
+        $(".error2").bind("click",function () {
+            $(this).parents("div.ssqtzNum").remove();
+            var str = tz.joinValue();
+            localStorage.setItem(gameCode, str);
+            tz.loadMoney()
+        })
     },
     loadMoney: function () {
         this.sum = new Array;
@@ -1443,9 +1432,5 @@ $(function () {
             break;
         case "jx11x5":
             jx11x5.init_info();
-
     }
-
-});/**
- * Created by admin on 2017/4/14.
- */
+});

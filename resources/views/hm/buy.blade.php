@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>竞彩足球 - 合买 </title>
+    <title>发起合买 </title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -9,12 +9,12 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
-    <link href="css/main.min.css" rel="stylesheet" type="text/css"/>
-    <link href="css/common.css" rel="stylesheet" type="text/css"/>
-    <script src="scripts/share.touch.min.js" type="text/javascript"></script>
-    <script src="scripts/common.js" type="text/javascript"></script>
-    <script src="scripts/iscroll.js" type="text/javascript"></script>
-    <script src="scripts/onlinephone.js" type="text/javascript"></script>
+    <link href="/css/main.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/common.css" rel="stylesheet" type="text/css"/>
+    <script src="/scripts/share.touch.min.js" type="text/javascript"></script>
+    <script src="/scripts/common.js" type="text/javascript"></script>
+    <script src="/scripts/iscroll.js" type="text/javascript"></script>
+    <script src="/scripts/onlinephone.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="tx_c" class="logints" style="display:none;"></div>
@@ -30,7 +30,8 @@
         <input type="button" value="确定" id="zfqd"/>
     </div>
 </section>
-<div id="Mask" style="display: none; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; background: none repeat scroll 0% 0% gray; opacity: 0.5; z-index: 999;"></div>
+<div id="Mask"
+     style="display: none; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; background: none repeat scroll 0% 0% gray; opacity: 0.5; z-index: 999;"></div>
 <script type="text/javascript">
     var ires = "http://res.qcwddd.com/iqucai.touch/images/";
     var dres = "http://data.qcwddd.com/matchdata/";
@@ -38,7 +39,7 @@
 
 <div style="position: relative;" id="outer">
     <div class="wrap">
-        <link href="css/pay.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/pay.css" rel="stylesheet" type="text/css"/>
         <section>
             <article id="content_home" style="display: block;">
                 <header class="tzHeader">
@@ -49,18 +50,20 @@
                 </header>
                 <div class="pdLeft04">
                     <p class="pdTop03 pdLeft06" id="detail">本方案共<cite class="red">0</cite>注<cite
-                            class="red">0</cite>倍，总金额<cite class="red">0</cite>元</p>
+                                class="red">0</cite>倍，总金额<cite class="red">0</cite>元</p>
                     <div class="s2">
                         <i>认购</i>
                         <span>
-                            <input onkeyup="this.value=this.value.replace(/\D/g,'')" id="rg" class="hmInput" value="1" type="tel">
+                            <input onkeyup="this.value=this.value.replace(/\D/g,'')" id="rg" class="hmInput" value="1"
+                                   type="tel">
                             元（<cite class="red" id="rg_bl">0%</cite>）
                         </span>
                     </div>
                     <div class="s2">
                         <i>保底</i>
                         <span>
-                            <input onkeyup="this.value=this.value.replace(/\D/g,'')" id="bd" class="hmInput" value="0" type="tel">
+                            <input onkeyup="this.value=this.value.replace(/\D/g,'')" id="bd" class="hmInput" value="0"
+                                   type="tel">
                             元（<cite class="red" id="bd_bl">0%</cite>）
                             <input type="checkbox" id="chk">
                             <em class="gray">全额保底</em>
@@ -110,22 +113,22 @@
         <script type="text/javascript">
             var gameCode = "JCZQ";
         </script>
-        <script src="scripts/user.js" type="text/javascript"></script>
+        <script src="/scripts/user.js" type="text/javascript"></script>
 
-        <script src="scripts/fqhm.js" type="text/javascript"></script>
+        <script src="/scripts/fqhm.js" type="text/javascript"></script>
 
 
     </div>
 </div>
 <div class="hide">
-    <script src="scripts/z_stat.js" language="JavaScript"></script>
+    <script src="/scripts/z_stat.js" language="JavaScript"></script>
 </div>
 <script>
-    $('#zfqd').click(function(){
+    $('#zfqd').click(function () {
         $('.zhezhao').hide();
         $('#dConfirm').hide();
     })
-    $('a.ture').click(function(){
+    $('a.ture').click(function () {
         $('.zhezhao').show();
         $('#dConfirm').show();
     })
