@@ -1,0 +1,2 @@
+1、选号页面选号，通过bet.js，对数进行整合，想数据存储到localStorage
+2、购物车列表页，ture.js从localStorage取出对应数据，并动态渲染html，点击“投注按钮”，将

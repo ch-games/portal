@@ -4,6 +4,7 @@
     <title>传统足球 - 投注列表</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <meta charset="utf-8"/>
+    <meta name="_token" content="{{ csrf_token() }}"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" name="viewport">
     <meta content="yes" name="apple-mobile-web-app-capable">
@@ -128,8 +129,10 @@
                             </div>
                             <div class="buyFloat">
                                 <input id="fqhm" class="fqhm" value="发起合买" type="button">
-                                <p id="count_">共<cite class="yellow">0</cite>注<cite class="yellow"
-                                                                                    id="CTZQ_Money">0</cite>元</p>
+                                <p id="count_">
+                                    共<cite class="yellow">0</cite>注
+                                    <cite class="yellow" id="CTZQ_Money">0</cite>元
+                                </p>
                                 <a href="javascript:;" class="ture" id="payment">投 注</a>
                             </div>
                         </div>

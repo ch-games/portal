@@ -40,3 +40,6 @@ Route::get('/hm/{type}', 'HmController@index');
 
 //购物车
 Route::get('/cart/{type}', 'CartController@index');
+
+//支付
+Route::get('/pay/{type}', 'PayController@index');
