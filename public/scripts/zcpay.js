@@ -23,13 +23,11 @@ var jc = {
             }
             jc.firstStep();
             jc.Show();
-
         }
-        $("#slideLoop").bind("click",
-            function () {
-                $(this).toggleClass("downHover");
-                $("#updownContent").slideToggle(400);
-            });
+        $("#slideLoop").bind("click", function () {
+            $(this).toggleClass("downHover");
+            $("#updownContent").slideToggle(400);
+        });
     },
     getFhref: function () {
         switch (gameCode.toLowerCase()) {
@@ -85,7 +83,6 @@ var jc = {
         }
     },
     delyObj: function () {
-
         if (!ponum) {
             return location.href = "/";
         }
@@ -107,7 +104,6 @@ var jc = {
         for (var i = 0; i < playtype.length; i++) {
             chuan.push(playtype[i]);
         }
-
         var betObj = {
             game: gameCode.toLowerCase(),
             stopTime: "",
