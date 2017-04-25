@@ -18,10 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-Route::get('/buy/{type}', 'BuyController@buy');
-Route::post('/buy/tz/{type}', 'BuyController@tz');
+Route::get('/buy/{slug}', 'BuyController@buy');
+Route::post('/buy/tz/{slug}', 'BuyController@tz');
 
-Route::get('/admin/api/lu/{type}', 'AdminController@lotteryUpdate');
+Route::post('/admin/api/result/{slug}', 'AdminController@resultUpdate');
 
 //北京单场
 Route::get('/dc/{type}', 'DcController@index');

@@ -6,9 +6,9 @@ use Request;
 class BuyController extends Controller
 {
     //
-    public function buy($type)
+    public function buy($slug)
     {
-        return view("buy_{$type}");
+        return view("buy_{$slug}");
     }
     
     public function tz($type) {
