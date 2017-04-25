@@ -196,7 +196,6 @@ var jc = {
         function callback(result) {
             $("#pay").removeClass("payment_disabled");
             if (result.IsSuccess) {
-
                 localStorage.removeItem(gameCode.toLowerCase() + gametype.toLowerCase() + "_PollNum");
                 localStorage.removeItem(gameCode.toLowerCase() + gametype.toLowerCase() + "_SelectNum");
                 if (jc.isDg)localStorage.removeItem("ItemAttch");
@@ -350,7 +349,6 @@ var jc = {
 
 $(function () {
     jc.initail();
-
     $("#pay").unbind("click").bind("click", function (event) {
         if ($(this).hasClass("payment_disabled")) return false;
         switch (gameCode.toLowerCase()) {
