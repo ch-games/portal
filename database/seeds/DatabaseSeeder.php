@@ -36,5 +36,20 @@ class DatabaseSeeder extends Seeder
     			'name' => '江西11选5',
     			'price' => 2,
     	]);
+		DB::table('lotteries')->insert([
+			'slug' => 'dc',
+			'name' => '北京单场',
+			'price' => 2,
+		]);
+        DB::table('lotteries')->insert([
+            'slug' => 'zq',
+            'name' => '竞彩足球',
+            'price' => 2,
+        ]);
+        DB::table('lotteries')->insert([
+            'slug' => 'lq',
+            'name' => '竞彩篮球',
+            'price' => 2,
+        ]);
     }
 }

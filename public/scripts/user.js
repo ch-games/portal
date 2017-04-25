@@ -55,7 +55,32 @@ var user = {
     },
     //刷新用户信息
     refresh: function (callback) {
-        $.getJSON(user.siteurl + "/user/info?r=" + Math.random().toFixed(5), function (data) {
+        $.post(user.siteurl + "/user/info",{'r':Math.random().toFixed(5)},function(data){
+            if (data.IsSuccess) {
+                user.info.isVip = data.isVip;
+                user.info.vipLevel = data.vipLevel;
+                user.info.isAuthentication = data.isAuthentication;
+                user.info.growthl = data.growthl;
+                user.info.accountl = data.accountl;
+                user.info.balance = data.balance;
+                user.info.isAlipay = data.isAlipay;
+                user.info.isGoldAlipay = data.isGoldAlipay;
+                user.info.displayName = data.displayName;
+                user.info.userId = data.userId;
+                user.info.isNeedBetPwd = data.isNeedBetPwd;
+                user.info.rbbalance = data.rbbalance;
+                user.info.isQQ = data.isQQ;
+                user.info.Figureurl = data.Figureurl;
+                user.info.unReadMail = data.unReadMail;
+                user.info.MaxLevelName = data.MaxLevelName;
+            } else {
+                user.info.reset();
+            }
+            if (callback != null && typeof (callback) == "function") {
+                callback();
+            }
+        });
+        /*$.getJSON(user.siteurl + "/user/info?r=" + Math.random().toFixed(5), function (data) {
             if (data.IsSuccess) {
                 user.info.isVip = data.isVip;
                 user.info.vipLevel = data.vipLevel;
@@ -80,19 +105,24 @@ var user = {
                 callback();
             }
 
-        });
+        });*/
     },
     //判断用户是否已登录
     isLogin: function (callback) {
-        var url = user.siteurl + "/user/islogin?r=" + Math.random();
-        $.get(url, function (res) {
+
+        var url = user.siteurl + "/user/islogin";
+        $.post(url,{'r':Math.random()},function(res){
             callback(res);
         });
+        /*var url = user.siteurl + "/user/islogin?r=" + Math.random();
+        $.get(url, function (res) {
+            callback(res);
+        });*/
     },
     //登录后如果刷新页面，则user.info里面的东西没有保存,所以重新请求一回
     reloadUser: function () {
-        var url = user.siteurl + "/user/reloaduser?r=" + Math.random();
-        $.get(url, function (response) {
+        var url = user.siteurl + "/user/reloaduser" ;
+        $.post(url,{'r':Math.random()},function(response){
             if (response.IsSuccess) {
                 user.info.isVip = response.isVip;
                 user.info.vipLevel = response.vipLevel;
@@ -111,6 +141,26 @@ var user = {
                 user.info.MaxLevelName = response.MaxLevelName
             }
         });
+        /*var url = user.siteurl + "/user/reloaduser?r=" + Math.random();
+        $.get(url, function (response) {
+            if (response.IsSuccess) {
+                user.info.isVip = response.isVip;
+                user.info.vipLevel = response.vipLevel;
+                user.info.isAuthentication = response.isAuthentication;
+                user.info.balance = response.balance;
+                user.info.isAlipay = response.isAlipay;
+                user.info.isGoldAlipay = response.isGoldAlipay;
+                user.info.displayName = response.displayName;
+                user.info.userId = response.userId;
+                user.info.isNeedBetPwd = response.isNeedBetPwd;
+                user.info.rbbalance = response.rbbalance;
+                user.info.isQQ = response.isQQ;
+                user.info.Figureurl = response.Figureurl;
+                user.info.unReadMail = response.unReadMail;
+                user.info.doudou = response.doudou;
+                user.info.MaxLevelName = response.MaxLevelName
+            }
+        });*/
 
     },
     //用户退出登录
@@ -137,7 +187,6 @@ $(function () {
         $("#check_save_pwd").prop("checked", 1);
     }
     $(".payment").click(function () {
-
         if ($(this).hasClass("payment_disabled")) return Box.alert("暂不能注册");
         var geetest = $("#hidGeetest").val();
         var url = "/user/LoacalUserRegister";

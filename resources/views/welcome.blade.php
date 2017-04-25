@@ -187,7 +187,7 @@
 </div>
 
 <div class="hide">
-    <script src="/scripts/z_stat.js" language="JavaScript"></script>
+
 </div>
 </body>
 </html>

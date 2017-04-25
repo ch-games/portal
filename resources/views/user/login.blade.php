@@ -192,9 +192,7 @@
                                    ondragenter="return false" onkeyup="this.value=check(this.value)">
                             <em style="display: none;" class="zhuceOpen2">123</em>
                         </div>
-
-
-                        <a href="javascript:;" class="payment" id="bott_">登录</a>
+                        <a href="javascript:;" class="payment" id="loginBtn">登录</a>
                     </div>
                     <input id="hidGeetest" type="hidden" value='Defalut'/>
                     <input type="hidden" id="hidType" value="register"/>
@@ -206,10 +204,9 @@
         </section>
         <div id="pop" class="hide">
         </div>
-        <script src="/scripts/gt.js"></script>
-        <script src="/scripts/user.js" type="text/javascript"></script>
-
     </div>
+    <script src="/scripts/gt.js"></script>
+    <script src="/scripts/user.js" type="text/javascript"></script>
 </div>
 </body>
 </html>
