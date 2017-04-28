@@ -81,14 +81,6 @@
                 </div>
             </footer>
         </div>
-        <script type="text/javascript">
-            var gameCode = "jczq";
-            var play = "brqspf";
-            var oddsType = 0;
-            var nowtime = "2017/04/10 15:12:23";
-        </script>
-
-        <script src="/scripts/jczq.js" type="text/javascript"></script>
 
     </div>
 </div>

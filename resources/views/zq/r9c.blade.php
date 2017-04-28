@@ -217,18 +217,10 @@
                 <a class="ture" href="javascript:;">确认</a>
             </div>
         </footer>
-        <script type="text/javascript">
-            var gameCode = "ctzq";
-            var type = "tr9";
-            var nowtime = "2017/04/10 15:12:24";
-            var IssuesNum = '';
-        </script>
-        <script src="/scripts/ctzq.js" type="text/javascript"></script>
+
     </div>
 </div>
-<div class="hide">
 
-</div>
 <script>
     $('.spfzpk2 span').click(function () {
         $(this).toggleClass('cur')

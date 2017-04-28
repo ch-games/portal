@@ -73,14 +73,9 @@
             </div>
         </footer>
 
-        <script type="text/javascript">
-            var gameCode = "jclq";
-            var play = "hh";
-            var oddsType = 1;
-            var nowtime = "2017/04/19 19:59:21";
-        </script>
+
         <link href="/css/jclq.css" rel="stylesheet" type="text/css"/>
-        <script src="/scripts/jclq.js?v=1219" type="text/javascript"></script>
+
     </div>
 </div>
 <div class="hide">

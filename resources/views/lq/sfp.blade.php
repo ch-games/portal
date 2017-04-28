@@ -191,14 +191,9 @@
                 <a id="isOk_" class="ture" href="javascript:;">下一步</a>
             </div>
         </footer>
-        <script type="text/javascript">
-            var gameCode = "jclq";
-            var play = "sf";
-            var oddsType = 0;
-            var nowtime = "2017/04/10 15:12:23";
-        </script>
+
         <link href="/css/jclq.css" rel="stylesheet" type="text/css"/>
-        <script src="/scripts/jclq.js" type="text/javascript"></script>
+
 
 
         <!--下单 s-->
@@ -373,9 +368,7 @@
 
     </div>
 </div>
-<div class="hide">
 
-</div>
 <script>
     $('#isOk_').click(function () {
         $('.step1').hide();

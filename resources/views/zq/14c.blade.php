@@ -88,14 +88,7 @@
                 <a class="ture" href="javascript:;">确认</a>
             </div>
         </footer>
-        <script type="text/javascript">
-            var gameCode = "ctzq";
-            var type = "t14c";
-            var nowtime = "2017/04/19 22:21:47";
-            var IssuesNum = '';
 
-        </script>
-        <script src="/scripts/ctzq.js" type="text/javascript"></script>
     </div>
 </div>
 <div class="hide">

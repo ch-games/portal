@@ -192,14 +192,8 @@
             </div>
         </footer>
 
-        <script type="text/javascript">
-            var gameCode = "jclq";
-            var play = "rfsf";
-            var oddsType = 0;
-            var nowtime = "2017/04/12 17:18:07";
-        </script>
+
         <link href="/css/jclq.css" rel="stylesheet" type="text/css"/>
-        <script src="/scripts/jclq.js" type="text/javascript"></script>
     </div>
 </div>
 <div class="hide">
